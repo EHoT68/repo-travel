@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="RU_ru">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- fonts -->
+   <link href="https://fonts.googleapis.com/css2?family=Marko+One&display=swap" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+   <!-- Bootstrap CSS -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+   <!-- calendar-->
+   <link href='css/main.min.css' rel='stylesheet' />
+
+   <!-- custom style -->
+   <link rel="stylesheet" href="css/owl.carousel.min.css">
+   <link rel="stylesheet" href="css/owl.theme.default.css">
+   <link rel="stylesheet" href="css/style.css"/>
+   <title>pero-travel</title>
+</head>
+<body>
+   <header>
+      <nav class="navbar navbar-expand-xl d-flex navbar-light">
+         <div class="container">
+            <a class="navbar-brand" href="#">
+               <svg width="40" height="57" viewBox="0 0 40 57" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <mask id="mask0_49_280" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="40" height="57">
+                  <rect width="40" height="57" fill="url(#pattern0)"/>
+                  </mask>
+                  <g mask="url(#mask0_49_280)">
+                  <rect class="svg-hover" y="1" width="40" height="58" fill="white"/>
+                  </g>
+                  <defs>
+                  <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                  <use xlink:href="#image0_49_280" transform="translate(-0.00353357) scale(0.00503534 0.00353357)"/>
+                  </pattern>
+                  <image id="image0_49_280" width="200" height="283" xlink:href="data:image/png;base64,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"/>
+                  </defs>
+               </svg>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+               <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect y="7" width="40" height="5" rx="2.5" fill="white"/>
+                  <rect y="17" width="40" height="5" rx="2.5" fill="white"/>
+                  <rect y="27" width="40" height="5" rx="2.5" fill="white"/>
+                  </svg>
+            </button>
+            <div class="row collapse navbar-collapse lap-div" id="navbarTogglerDemo01">
+               <a class="col" href="#">Главная</a>
+               <a class="col" href="#">Экскурсии</a>
+               <a class="col" href="#">Личный&nbsp;кабинет</a>
+            </div>
+         </div>
+       </nav>
+   </header>
+   <section class="container-fluid top-banner-review d-flex">
+      <div class="container align-self-center top-banner-review__title">
+         <div class="row">
+            <span>Автобусный тур</span>
+            <h1>ЗОЛОТОЕ КОЛЬЦО АБХАЗИИ<br>(ИЗ АДЛЕРА)</h1>
+            <div class="d-flex">
+               <a href="#">К другим экскурсиям <svg width="15" height="8" viewBox="0 0 15 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.3536 4.35355C14.5488 4.15829 14.5488 3.84171 14.3536 3.64645L11.1716 0.464466C10.9763 0.269204 10.6597 0.269204 10.4645 0.464466C10.2692 0.659728 10.2692 0.976311 10.4645 1.17157L13.2929 4L10.4645 6.82843C10.2692 7.02369 10.2692 7.34027 10.4645 7.53553C10.6597 7.7308 10.9763 7.7308 11.1716 7.53553L14.3536 4.35355ZM0 4.5H14V3.5H0V4.5Z" fill="white"/>
+                  </svg></a>
+               <div class="d-flex align-self-center top-banner-review__title-heart">
+                  <div></div>
+                  <svg width="30" height="26" viewBox="0 0 30 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M26.0497 3.76249C25.4112 3.12375 24.6532 2.61705 23.8189 2.27135C22.9845 1.92565 22.0903 1.74771 21.1872 1.74771C20.2841 1.74771 19.3898 1.92565 18.5555 2.27135C17.7211 2.61705 16.9631 3.12375 16.3247 3.76249L14.9997 5.08749L13.6747 3.76249C12.385 2.47288 10.636 1.74838 8.81216 1.74838C6.98837 1.74838 5.23928 2.47288 3.94966 3.76249C2.66005 5.05211 1.93555 6.8012 1.93555 8.62499C1.93555 10.4488 2.66005 12.1979 3.94966 13.4875L5.27466 14.8125L14.9997 24.5375L24.7247 14.8125L26.0497 13.4875C26.6884 12.849 27.1951 12.091 27.5408 11.2567C27.8865 10.4224 28.0644 9.5281 28.0644 8.62499C28.0644 7.72188 27.8865 6.82762 27.5408 5.9933C27.1951 5.15897 26.6884 4.40094 26.0497 3.76249V3.76249Z" stroke="#D4D4D4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <section class="container desc-tour">
+      <div class="row">
+         <div class="col container desc-tour__title">
+            <h3>Описание экскурсии</h3>
+            <p>Вас ждет путешествие по "Золотому Кольцу Абхазии" на Мерседес Спринтер (20 мест). По маршруту вас будет сопровождать профессиональный гид. Посадка на экскурсию осуществляется с вашего отеля или ближайшей автобусной остановки. Пересечение границы без пересадок. </p>
+         </div>
+         <div class="col d-flex justify-content-center align-items-center desc-tour__item-box">
+            <div class="desc-tour__item">
+               <div class="desc-tour__item-ring"></div>
+               <div class="desc-tour__item-back"></div>
+               <div class="desc-tour__item-title">
+                  <h4 class="d-flex"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.4002 8.83994C22.8023 8.83994 25.5602 7.85497 25.5602 6.63994C25.5602 5.42492 22.8023 4.43994 19.4002 4.43994C15.9982 4.43994 13.2402 5.42492 13.2402 6.63994C13.2402 7.85497 15.9982 8.83994 19.4002 8.83994Z" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M13.2402 7.08008C13.2402 7.48136 13.2402 9.3188 13.2402 9.72008C13.2402 10.9349 15.9973 11.9201 19.4002 11.9201C22.8032 11.9201 25.5602 10.9349 25.5602 9.72008C25.5602 9.3188 25.5602 7.48136 25.5602 7.08008" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M16.5625 14.7531C17.4117 14.9106 18.3771 14.9999 19.4005 14.9999C22.8035 14.9999 25.5605 14.0148 25.5605 12.7999C25.5605 12.3986 25.5605 10.5612 25.5605 10.1599" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M13.2402 10.1599C13.2402 10.5612 13.2402 12.0387 13.2402 12.0387" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M16.7715 17.8701C17.5688 18.0047 18.4598 18.08 19.4005 18.08C22.8034 18.08 25.5605 17.0953 25.5605 15.88C25.5605 15.4787 25.5605 13.6413 25.5605 13.24" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M16.7373 20.9445C17.5429 21.0826 18.4463 21.1601 19.4002 21.1601C22.8031 21.1601 25.5602 20.1753 25.5602 18.9601C25.5602 18.5588 25.5602 16.7213 25.5602 16.3201" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M10.5995 16.3199C14.0015 16.3199 16.7595 15.3349 16.7595 14.1199C16.7595 12.9049 14.0015 11.9199 10.5995 11.9199C7.19738 11.9199 4.43945 12.9049 4.43945 14.1199C4.43945 15.3349 7.19738 16.3199 10.5995 16.3199Z" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M4.43945 14.5601C4.43945 14.9613 4.43945 16.7988 4.43945 17.2001C4.43945 18.4153 7.19649 19.4001 10.5995 19.4001C14.0024 19.4001 16.7595 18.4153 16.7595 17.2001C16.7595 16.7988 16.7595 14.9613 16.7595 14.5601" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M4.43945 17.6399C4.43945 18.0412 4.43945 19.8786 4.43945 20.2799C4.43945 21.4952 7.19649 22.4799 10.5995 22.4799C14.0024 22.4799 16.7595 21.4952 16.7595 20.2799C16.7595 19.8786 16.7595 18.0412 16.7595 17.6399" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M4.43945 20.72C4.43945 21.1213 4.43945 22.9587 4.43945 23.36C4.43945 24.5753 7.19649 25.56 10.5995 25.56C14.0024 25.56 16.7595 24.5753 16.7595 23.36C16.7595 22.9587 16.7595 21.1213 16.7595 20.72" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>1&nbsp;618&nbsp;₽</span> 
+                  </h4>
+                  <p>Взрослый&nbsp;билет</p>
+               </div>
+            </div>
+            <div class="desc-tour__item">
+               <div class="desc-tour__item-ring"></div>
+               <div class="desc-tour__item-back"></div>
+               <div class="desc-tour__item-title">
+                  <h4 class="d-flex"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.4002 8.83994C22.8023 8.83994 25.5602 7.85497 25.5602 6.63994C25.5602 5.42492 22.8023 4.43994 19.4002 4.43994C15.9982 4.43994 13.2402 5.42492 13.2402 6.63994C13.2402 7.85497 15.9982 8.83994 19.4002 8.83994Z" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M13.2402 7.08008C13.2402 7.48136 13.2402 9.3188 13.2402 9.72008C13.2402 10.9349 15.9973 11.9201 19.4002 11.9201C22.8032 11.9201 25.5602 10.9349 25.5602 9.72008C25.5602 9.3188 25.5602 7.48136 25.5602 7.08008" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M16.5625 14.7531C17.4117 14.9106 18.3771 14.9999 19.4005 14.9999C22.8035 14.9999 25.5605 14.0148 25.5605 12.7999C25.5605 12.3986 25.5605 10.5612 25.5605 10.1599" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M13.2402 10.1599C13.2402 10.5612 13.2402 12.0387 13.2402 12.0387" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M16.7715 17.8701C17.5688 18.0047 18.4598 18.08 19.4005 18.08C22.8034 18.08 25.5605 17.0953 25.5605 15.88C25.5605 15.4787 25.5605 13.6413 25.5605 13.24" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M16.7373 20.9445C17.5429 21.0826 18.4463 21.1601 19.4002 21.1601C22.8031 21.1601 25.5602 20.1753 25.5602 18.9601C25.5602 18.5588 25.5602 16.7213 25.5602 16.3201" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M10.5995 16.3199C14.0015 16.3199 16.7595 15.3349 16.7595 14.1199C16.7595 12.9049 14.0015 11.9199 10.5995 11.9199C7.19738 11.9199 4.43945 12.9049 4.43945 14.1199C4.43945 15.3349 7.19738 16.3199 10.5995 16.3199Z" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M4.43945 14.5601C4.43945 14.9613 4.43945 16.7988 4.43945 17.2001C4.43945 18.4153 7.19649 19.4001 10.5995 19.4001C14.0024 19.4001 16.7595 18.4153 16.7595 17.2001C16.7595 16.7988 16.7595 14.9613 16.7595 14.5601" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M4.43945 17.6399C4.43945 18.0412 4.43945 19.8786 4.43945 20.2799C4.43945 21.4952 7.19649 22.4799 10.5995 22.4799C14.0024 22.4799 16.7595 21.4952 16.7595 20.2799C16.7595 19.8786 16.7595 18.0412 16.7595 17.6399" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M4.43945 20.72C4.43945 21.1213 4.43945 22.9587 4.43945 23.36C4.43945 24.5753 7.19649 25.56 10.5995 25.56C14.0024 25.56 16.7595 24.5753 16.7595 23.36C16.7595 22.9587 16.7595 21.1213 16.7595 20.72" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>1&nbsp;412&nbsp;₽</span>
+                  </h4>
+                  <p>Детский&nbsp;билет</p>
+               </div>
+            </div>
+            <div class="desc-tour__item">
+               <div class="desc-tour__item-ring"></div>
+               <div class="desc-tour__item-back"></div>
+               <div class="desc-tour__item-title title-pading">
+                  <h4 class="d-flex"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 19.375C8.1458 19.375 6.33324 18.8252 4.79153 17.795C3.24982 16.7649 2.0482 15.3007 1.33863 13.5877C0.629062 11.8746 0.443406 9.9896 0.805142 8.17103C1.16688 6.35246 2.05976 4.68199 3.37088 3.37088C4.68199 2.05976 6.35246 1.16688 8.17103 0.805142C9.9896 0.443406 11.8746 0.629062 13.5877 1.33863C15.3007 2.0482 16.7649 3.24982 17.795 4.79153C18.8252 6.33324 19.375 8.1458 19.375 10C19.375 12.4864 18.3873 14.871 16.6291 16.6291C14.871 18.3873 12.4864 19.375 10 19.375ZM10 1.875C8.39303 1.875 6.82214 2.35153 5.486 3.24431C4.14985 4.1371 3.10844 5.40605 2.49348 6.8907C1.87852 8.37535 1.71762 10.009 2.03112 11.5851C2.34463 13.1612 3.11846 14.6089 4.25476 15.7452C5.39106 16.8815 6.8388 17.6554 8.41489 17.9689C9.99099 18.2824 11.6247 18.1215 13.1093 17.5065C14.594 16.8916 15.8629 15.8502 16.7557 14.514C17.6485 13.1779 18.125 11.607 18.125 10C18.125 7.84512 17.269 5.77849 15.7452 4.25476C14.2215 2.73103 12.1549 1.875 10 1.875Z" fill="#0499DD"/>
+                        <path d="M12.65 13.5375L9.55626 10.4437C9.49833 10.3853 9.45251 10.3161 9.4214 10.2399C9.3903 10.1638 9.37453 10.0823 9.37501 10V5H10.625V9.74375L13.5375 12.65L12.65 13.5375Z" fill="#0499DD"/>
+                        </svg>
+                        <span>12&nbsp;часов</span>
+                  </h4>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <section class="calendar">
+      <div class="col calendar__back-img"></div>
+      <div class="d-flex align-items-end flex-column container-md">
+         <div class="col calendar__title">
+            <h3>Календарь путешествий</h3>
+            <div class="cal-box">
+               <div id='calendar'></div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- Тут карусель -->
+
+   <section class="container rout-deck">
+      <div class="d-flex rout-deck__box">
+         <div class="rout-deck__title">
+            <h3>Описание маршрута</h3>
+            <ul>
+               <li>Город Гагра, Колоннада, ресторан "Гагрипш", Парк принца Ольденбурского;</li>
+               <li>Смотровая площадка "Прощай Родина", "Чабгарский" карниз, Подвесной мост через реку "Бзыбь";</li>
+               <li>Дегустация сыра, меда, вина, чачи (входит в стоимость экскурсии), Голубое Озеро, Юпшарский каньон ("Каменный мешок"), Озеро "Рица", Водопады "Девичьи и мужские слезы".</li>
+               <p>Далее на выбор:</p>
+               <li>Монастырь "Новый Афон", Новоафонская Пещера, "Рукотворный" водопад, храм "Симона Кананита", Лебединое озеро.</li>
+               <li>Термальный источник в с. Приморское.  </li>
+            </ul>
+         </div>
+         <div class="rout-deck__shell">
+            <div class="rout-deck__carousel">
+               <div id="sync1" class="owl-carousel owl-theme">
+                  <div class="item">
+                     <img src="img/carousel-gagr.png" alt="тур">
+                     <h4>Гагра</h4>
+                  </div>
+                  <div class="item">
+                     <img src="img/carousel-kollo.jpg" alt="тур2">
+                     <h4>Коллонада</h4>
+                  </div>
+                  <div class="item">
+                     <img src="img/carousel-gagr.png" alt="тур3">
+                     <h4>Гагра</h4>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <section class="container expenses">
+      <div class="col expenses__title">
+         <h3>Дополнительные расходы (по желанию)</h3>
+         <div class="d-flex justify-content-center expenses__table">
+            <div class="desc-tour__item justify-content-center d-flex  expenses__table-item">
+               <div class="desc-tour__item-ring"></div>
+               <div class="desc-tour__item-back"></div>
+               <div class="desc-tour__item-title">
+                  <h4 class="d-flex"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.4002 8.83994C22.8023 8.83994 25.5602 7.85497 25.5602 6.63994C25.5602 5.42492 22.8023 4.43994 19.4002 4.43994C15.9982 4.43994 13.2402 5.42492 13.2402 6.63994C13.2402 7.85497 15.9982 8.83994 19.4002 8.83994Z" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M13.2402 7.08008C13.2402 7.48136 13.2402 9.3188 13.2402 9.72008C13.2402 10.9349 15.9973 11.9201 19.4002 11.9201C22.8032 11.9201 25.5602 10.9349 25.5602 9.72008C25.5602 9.3188 25.5602 7.48136 25.5602 7.08008" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M16.5625 14.7531C17.4117 14.9106 18.3771 14.9999 19.4005 14.9999C22.8035 14.9999 25.5605 14.0148 25.5605 12.7999C25.5605 12.3986 25.5605 10.5612 25.5605 10.1599" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M13.2402 10.1599C13.2402 10.5612 13.2402 12.0387 13.2402 12.0387" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M16.7715 17.8701C17.5688 18.0047 18.4598 18.08 19.4005 18.08C22.8034 18.08 25.5605 17.0953 25.5605 15.88C25.5605 15.4787 25.5605 13.6413 25.5605 13.24" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M16.7373 20.9445C17.5429 21.0826 18.4463 21.1601 19.4002 21.1601C22.8031 21.1601 25.5602 20.1753 25.5602 18.9601C25.5602 18.5588 25.5602 16.7213 25.5602 16.3201" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M10.5995 16.3199C14.0015 16.3199 16.7595 15.3349 16.7595 14.1199C16.7595 12.9049 14.0015 11.9199 10.5995 11.9199C7.19738 11.9199 4.43945 12.9049 4.43945 14.1199C4.43945 15.3349 7.19738 16.3199 10.5995 16.3199Z" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M4.43945 14.5601C4.43945 14.9613 4.43945 16.7988 4.43945 17.2001C4.43945 18.4153 7.19649 19.4001 10.5995 19.4001C14.0024 19.4001 16.7595 18.4153 16.7595 17.2001C16.7595 16.7988 16.7595 14.9613 16.7595 14.5601" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M4.43945 17.6399C4.43945 18.0412 4.43945 19.8786 4.43945 20.2799C4.43945 21.4952 7.19649 22.4799 10.5995 22.4799C14.0024 22.4799 16.7595 21.4952 16.7595 20.2799C16.7595 19.8786 16.7595 18.0412 16.7595 17.6399" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M4.43945 20.72C4.43945 21.1213 4.43945 22.9587 4.43945 23.36C4.43945 24.5753 7.19649 25.56 10.5995 25.56C14.0024 25.56 16.7595 24.5753 16.7595 23.36C16.7595 22.9587 16.7595 21.1213 16.7595 20.72" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>200&nbsp;₽</span> 
+                  </h4>
+                  <p>Дача&nbsp;Сталина</p>
+               </div>
+            </div>
+            <div class="desc-tour__item justify-content-center d-flex  expenses__table-item">
+               <div class="desc-tour__item-ring"></div>
+               <div class="desc-tour__item-back"></div>
+               <div class="desc-tour__item-title">
+                  <h4 class="d-flex"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.4002 8.83994C22.8023 8.83994 25.5602 7.85497 25.5602 6.63994C25.5602 5.42492 22.8023 4.43994 19.4002 4.43994C15.9982 4.43994 13.2402 5.42492 13.2402 6.63994C13.2402 7.85497 15.9982 8.83994 19.4002 8.83994Z" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M13.2402 7.08008C13.2402 7.48136 13.2402 9.3188 13.2402 9.72008C13.2402 10.9349 15.9973 11.9201 19.4002 11.9201C22.8032 11.9201 25.5602 10.9349 25.5602 9.72008C25.5602 9.3188 25.5602 7.48136 25.5602 7.08008" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M16.5625 14.7531C17.4117 14.9106 18.3771 14.9999 19.4005 14.9999C22.8035 14.9999 25.5605 14.0148 25.5605 12.7999C25.5605 12.3986 25.5605 10.5612 25.5605 10.1599" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M13.2402 10.1599C13.2402 10.5612 13.2402 12.0387 13.2402 12.0387" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M16.7715 17.8701C17.5688 18.0047 18.4598 18.08 19.4005 18.08C22.8034 18.08 25.5605 17.0953 25.5605 15.88C25.5605 15.4787 25.5605 13.6413 25.5605 13.24" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M16.7373 20.9445C17.5429 21.0826 18.4463 21.1601 19.4002 21.1601C22.8031 21.1601 25.5602 20.1753 25.5602 18.9601C25.5602 18.5588 25.5602 16.7213 25.5602 16.3201" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M10.5995 16.3199C14.0015 16.3199 16.7595 15.3349 16.7595 14.1199C16.7595 12.9049 14.0015 11.9199 10.5995 11.9199C7.19738 11.9199 4.43945 12.9049 4.43945 14.1199C4.43945 15.3349 7.19738 16.3199 10.5995 16.3199Z" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M4.43945 14.5601C4.43945 14.9613 4.43945 16.7988 4.43945 17.2001C4.43945 18.4153 7.19649 19.4001 10.5995 19.4001C14.0024 19.4001 16.7595 18.4153 16.7595 17.2001C16.7595 16.7988 16.7595 14.9613 16.7595 14.5601" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M4.43945 17.6399C4.43945 18.0412 4.43945 19.8786 4.43945 20.2799C4.43945 21.4952 7.19649 22.4799 10.5995 22.4799C14.0024 22.4799 16.7595 21.4952 16.7595 20.2799C16.7595 19.8786 16.7595 18.0412 16.7595 17.6399" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M4.43945 20.72C4.43945 21.1213 4.43945 22.9587 4.43945 23.36C4.43945 24.5753 7.19649 25.56 10.5995 25.56C14.0024 25.56 16.7595 24.5753 16.7595 23.36C16.7595 22.9587 16.7595 21.1213 16.7595 20.72" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>200&nbsp;₽</span>
+                  </h4>
+                  <p>Молочный&nbsp;водопад</p>
+               </div>
+            </div>
+            <div class="desc-tour__item justify-content-center d-flex  expenses__table-item">
+               <div class="desc-tour__item-ring"></div>
+               <div class="desc-tour__item-back"></div>
+               <div class="desc-tour__item-title ">
+                  <h4 class="d-flex">
+                     <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.4002 8.83994C22.8023 8.83994 25.5602 7.85497 25.5602 6.63994C25.5602 5.42492 22.8023 4.43994 19.4002 4.43994C15.9982 4.43994 13.2402 5.42492 13.2402 6.63994C13.2402 7.85497 15.9982 8.83994 19.4002 8.83994Z" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M13.2402 7.08008C13.2402 7.48136 13.2402 9.3188 13.2402 9.72008C13.2402 10.9349 15.9973 11.9201 19.4002 11.9201C22.8032 11.9201 25.5602 10.9349 25.5602 9.72008C25.5602 9.3188 25.5602 7.48136 25.5602 7.08008" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M16.5625 14.7531C17.4117 14.9106 18.3771 14.9999 19.4005 14.9999C22.8035 14.9999 25.5605 14.0148 25.5605 12.7999C25.5605 12.3986 25.5605 10.5612 25.5605 10.1599" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M13.2402 10.1599C13.2402 10.5612 13.2402 12.0387 13.2402 12.0387" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M16.7715 17.8701C17.5688 18.0047 18.4598 18.08 19.4005 18.08C22.8034 18.08 25.5605 17.0953 25.5605 15.88C25.5605 15.4787 25.5605 13.6413 25.5605 13.24" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M16.7373 20.9445C17.5429 21.0826 18.4463 21.1601 19.4002 21.1601C22.8031 21.1601 25.5602 20.1753 25.5602 18.9601C25.5602 18.5588 25.5602 16.7213 25.5602 16.3201" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M10.5995 16.3199C14.0015 16.3199 16.7595 15.3349 16.7595 14.1199C16.7595 12.9049 14.0015 11.9199 10.5995 11.9199C7.19738 11.9199 4.43945 12.9049 4.43945 14.1199C4.43945 15.3349 7.19738 16.3199 10.5995 16.3199Z" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M4.43945 14.5601C4.43945 14.9613 4.43945 16.7988 4.43945 17.2001C4.43945 18.4153 7.19649 19.4001 10.5995 19.4001C14.0024 19.4001 16.7595 18.4153 16.7595 17.2001C16.7595 16.7988 16.7595 14.9613 16.7595 14.5601" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M4.43945 17.6399C4.43945 18.0412 4.43945 19.8786 4.43945 20.2799C4.43945 21.4952 7.19649 22.4799 10.5995 22.4799C14.0024 22.4799 16.7595 21.4952 16.7595 20.2799C16.7595 19.8786 16.7595 18.0412 16.7595 17.6399" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M4.43945 20.72C4.43945 21.1213 4.43945 22.9587 4.43945 23.36C4.43945 24.5753 7.19649 25.56 10.5995 25.56C14.0024 25.56 16.7595 24.5753 16.7595 23.36C16.7595 22.9587 16.7595 21.1213 16.7595 20.72" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>500&nbsp;₽</span>
+                  </h4>
+                  <p>Новоафинская&nbsp;пещера</p>
+               </div>
+            </div>
+            <div class="desc-tour__item justify-content-center d-flex  expenses__table-item">
+               <div class="desc-tour__item-ring"></div>
+               <div class="desc-tour__item-back"></div>
+               <div class="desc-tour__item-title ">
+                  <h4 class="d-flex">
+                     <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.4002 8.83994C22.8023 8.83994 25.5602 7.85497 25.5602 6.63994C25.5602 5.42492 22.8023 4.43994 19.4002 4.43994C15.9982 4.43994 13.2402 5.42492 13.2402 6.63994C13.2402 7.85497 15.9982 8.83994 19.4002 8.83994Z" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M13.2402 7.08008C13.2402 7.48136 13.2402 9.3188 13.2402 9.72008C13.2402 10.9349 15.9973 11.9201 19.4002 11.9201C22.8032 11.9201 25.5602 10.9349 25.5602 9.72008C25.5602 9.3188 25.5602 7.48136 25.5602 7.08008" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M16.5625 14.7531C17.4117 14.9106 18.3771 14.9999 19.4005 14.9999C22.8035 14.9999 25.5605 14.0148 25.5605 12.7999C25.5605 12.3986 25.5605 10.5612 25.5605 10.1599" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M13.2402 10.1599C13.2402 10.5612 13.2402 12.0387 13.2402 12.0387" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M16.7715 17.8701C17.5688 18.0047 18.4598 18.08 19.4005 18.08C22.8034 18.08 25.5605 17.0953 25.5605 15.88C25.5605 15.4787 25.5605 13.6413 25.5605 13.24" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M16.7373 20.9445C17.5429 21.0826 18.4463 21.1601 19.4002 21.1601C22.8031 21.1601 25.5602 20.1753 25.5602 18.9601C25.5602 18.5588 25.5602 16.7213 25.5602 16.3201" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M10.5995 16.3199C14.0015 16.3199 16.7595 15.3349 16.7595 14.1199C16.7595 12.9049 14.0015 11.9199 10.5995 11.9199C7.19738 11.9199 4.43945 12.9049 4.43945 14.1199C4.43945 15.3349 7.19738 16.3199 10.5995 16.3199Z" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M4.43945 14.5601C4.43945 14.9613 4.43945 16.7988 4.43945 17.2001C4.43945 18.4153 7.19649 19.4001 10.5995 19.4001C14.0024 19.4001 16.7595 18.4153 16.7595 17.2001C16.7595 16.7988 16.7595 14.9613 16.7595 14.5601" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M4.43945 17.6399C4.43945 18.0412 4.43945 19.8786 4.43945 20.2799C4.43945 21.4952 7.19649 22.4799 10.5995 22.4799C14.0024 22.4799 16.7595 21.4952 16.7595 20.2799C16.7595 19.8786 16.7595 18.0412 16.7595 17.6399" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M4.43945 20.72C4.43945 21.1213 4.43945 22.9587 4.43945 23.36C4.43945 24.5753 7.19649 25.56 10.5995 25.56C14.0024 25.56 16.7595 24.5753 16.7595 23.36C16.7595 22.9587 16.7595 21.1213 16.7595 20.72" stroke="#0499DD" stroke-width="0.6" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span>500&nbsp;₽</span>
+                  </h4>
+                  <p>Термальный&nbsp;источник</p>
+               </div>
+            </div>
+            <div class="desc-tour__item justify-content-center d-flex expenses__table-item">
+               <div class="desc-tour__item-ring"></div>
+               <div class="desc-tour__item-back"></div>
+               <div class="desc-tour__item-title title-pading">
+                  <p>Обед</p>
+               </div>
+            </div>
+         </div>
+      </div>
+
+   </section>
+   <section class="container import-info">
+      <div class="import-info__box">
+         <h3>Важная информация</h3>
+         <div class="d-flex">
+            <div class="d-flex flex-column import-info__cont-left">
+               <h4>При пересечении границы (Россия-Абхазия) при себе иметь:</h4>
+               <div class="d-flex import-info__cont-left-item">
+                  <div>
+                  <svg width="68" height="68" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <circle cx="25" cy="25" r="25" fill="#FFC700"/>
+                     <path d="M60.0312 53.6562H47.2812V56.8438H60.0312V53.6562Z" fill="#282828"/>
+                     <path d="M60.0312 47.2812H47.2812V50.4688H60.0312V47.2812Z" fill="#282828"/>
+                     <path d="M60.0312 40.9062H47.2812V44.0938H60.0312V40.9062Z" fill="#282828"/>
+                     <path d="M64.8125 28.1562H45.6875V31.3438H63.2188V60.0312H21.7812V31.3438H39.3125V28.1562H20.1875C19.3072 28.1562 18.5938 28.8702 18.5938 29.75V61.625C18.5938 62.5047 19.3072 63.2188 20.1875 63.2188H64.8125C65.6928 63.2188 66.4062 62.5047 66.4062 61.625V29.75C66.4062 28.8702 65.6928 28.1562 64.8125 28.1562Z" fill="#282828"/>
+                     <path d="M37.7188 32.4062V21.7812H47.2812V32.4062C47.2812 33.2865 46.5678 34 45.6875 34H39.3125C38.4322 34 37.7188 33.2865 37.7188 32.4062ZM40.9062 30.8125H44.0938V24.9688H40.9062V30.8125Z" fill="#282828"/>
+                     <path d="M44.0938 49.4062C44.0938 46.8132 42.5351 44.5809 40.3075 43.5859C40.6879 42.7699 40.9062 41.8641 40.9062 40.9062C40.9062 37.391 38.0465 34.5312 34.5312 34.5312C31.016 34.5312 28.1562 37.391 28.1562 40.9062C28.1562 41.8641 28.3746 42.7699 28.755 43.5859C26.5274 44.5809 24.9688 46.8132 24.9688 49.4062V56.8438H44.0938V49.4062ZM34.5312 37.7188C36.2892 37.7188 37.7188 39.1483 37.7188 40.9062C37.7188 42.6642 36.2892 44.0938 34.5312 44.0938C32.7733 44.0938 31.3438 42.6642 31.3438 40.9062C31.3438 39.1483 32.7733 37.7188 34.5312 37.7188ZM40.9062 53.6562H28.1562V49.4062C28.1562 47.7514 29.4243 46.3866 31.0404 46.2342C32.0439 46.894 33.2424 47.2812 34.5312 47.2812C35.8201 47.2812 37.0186 46.894 38.0216 46.2342C39.6382 46.3866 40.9062 47.7514 40.9062 49.4062V53.6562Z" fill="#282828"/>
+                     </svg>
+                  </div>
+                  <h5>Паспорт гражданина РФ</h5>
+               </div>
+               <div class="d-flex import-info__cont-left-item">
+                  <div>
+                  <svg width="68" height="68" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <circle cx="25" cy="25" r="25" fill="#FFC700"/>
+                     <path d="M60.0312 53.6562H47.2812V56.8438H60.0312V53.6562Z" fill="#282828"/>
+                     <path d="M60.0312 47.2812H47.2812V50.4688H60.0312V47.2812Z" fill="#282828"/>
+                     <path d="M60.0312 40.9062H47.2812V44.0938H60.0312V40.9062Z" fill="#282828"/>
+                     <path d="M64.8125 28.1562H45.6875V31.3438H63.2188V60.0312H21.7812V31.3438H39.3125V28.1562H20.1875C19.3072 28.1562 18.5938 28.8702 18.5938 29.75V61.625C18.5938 62.5047 19.3072 63.2188 20.1875 63.2188H64.8125C65.6928 63.2188 66.4062 62.5047 66.4062 61.625V29.75C66.4062 28.8702 65.6928 28.1562 64.8125 28.1562Z" fill="#282828"/>
+                     <path d="M37.7188 32.4062V21.7812H47.2812V32.4062C47.2812 33.2865 46.5678 34 45.6875 34H39.3125C38.4322 34 37.7188 33.2865 37.7188 32.4062ZM40.9062 30.8125H44.0938V24.9688H40.9062V30.8125Z" fill="#282828"/>
+                     <path d="M44.0938 49.4062C44.0938 46.8132 42.5351 44.5809 40.3075 43.5859C40.6879 42.7699 40.9062 41.8641 40.9062 40.9062C40.9062 37.391 38.0465 34.5312 34.5312 34.5312C31.016 34.5312 28.1562 37.391 28.1562 40.9062C28.1562 41.8641 28.3746 42.7699 28.755 43.5859C26.5274 44.5809 24.9688 46.8132 24.9688 49.4062V56.8438H44.0938V49.4062ZM34.5312 37.7188C36.2892 37.7188 37.7188 39.1483 37.7188 40.9062C37.7188 42.6642 36.2892 44.0938 34.5312 44.0938C32.7733 44.0938 31.3438 42.6642 31.3438 40.9062C31.3438 39.1483 32.7733 37.7188 34.5312 37.7188ZM40.9062 53.6562H28.1562V49.4062C28.1562 47.7514 29.4243 46.3866 31.0404 46.2342C32.0439 46.894 33.2424 47.2812 34.5312 47.2812C35.8201 47.2812 37.0186 46.894 38.0216 46.2342C39.6382 46.3866 40.9062 47.7514 40.9062 49.4062V53.6562Z" fill="#282828"/>
+                     </svg>
+                  </div>
+                  <div>
+                     <h5>Гражданам до 14 лет свидетельство о рождении</h5>
+                     <p>Несовершеннолетние дети пересекают границу в сопровождении родителей, в сопровождении законного представителя (нотариально заверенная доверенность с указанием страны вывоза ребенка).</p>
+                  </div>
+               </div>
+            </div>
+            <div class="d-flex flex-column import-info__cont-right">
+            <div class="d-flex import-info__cont-right-item">
+               <p>Иностранным гражданам въезд в Абхазию <span>ограничен</span> , кроме граждан Украины, республик ДНР и ЛНР.</p>
+               <h5>!</h5>
+            </div>
+            <div class="d-flex import-info__cont-right-item">
+               <p>При возвращении из Абхазии в Россию сдавать ПЦР-тест не нужно, на карантин помещать не будут (Постановление Правительства РФ 1996-Р от 01.08.2020).</p>
+               <h5>
+                  !
+               </h5>
+            </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <section class="gallery-tour">
+      <div class="container d-flex justify-content-between gallery-tour__title">
+         <h3>Галерея тура</h3>
+         <p>Смотреть все</p>
+      </div>
+      <div class="container-xxl gallery-tour__content">
+         <img src="img/gallery-img1.png" alt="озеро">
+         <img src="img/gallery-img2.png" alt="лесница">
+         <img src="img/gallery-img3.png" alt="квадроцикл">
+         <img src="img/gallery-img4.png" alt="колоны">
+         <img src="img/gallery-img5.png" alt="лошадь">
+         <img src="img/gallery-img6.png" alt="утёс">
+         <img src="img/gallery-img7.png" alt="ущелье">
+         <img src="img/gallery-img8.png" alt="берег">
+      </div>
+   </section>
+   <section class="reviews">
+      <div class="container">
+         <div class="d-flex justify-content-between reviews__title">
+            <h3>Отзывы</h3>
+            <p>Смотреть все</p>
+         </div>
+         <div class="reviews__shell">
+            <div class="d-flex reviews__carousel">
+               <div id="sync2" class="owl-carousel owl-theme">
+                  <div class="item">
+                     <figure class="d-flex">
+                        <img src="img/review-img1.png" alt="фото">
+                        <div>
+                           <h4>
+                           Иван Иванов, 25 лет
+                           </h4>
+                           <p>
+                           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                           </p>
+                        </div>
+                        <span>”</span>
+                     </figure>
+                  </div>
+                  <div class="item">
+                     <figure class="d-flex">
+                        <img src="img/review-img2.png" alt="фото">
+                        <div>
+                           <h4>
+                           Иван Иванов, 25 лет
+                           </h4>
+                           <p>
+                           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                           </p>
+                        </div>
+                        <span>”</span>
+                     </figure>
+                  </div>
+                  <div class="item">
+                     <figure class="d-flex">
+                        <img src="img/review-img1.png" alt="фото">
+                        <div>
+                           <h4>
+                           Иван Иванов, 25 лет
+                           </h4>
+                           <p>
+                           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                           </p>
+                        </div>
+                        <span>”</span>
+                     </figure>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <section class="d-flex container-md justify-content-between form">
+      <div class="form-shell">
+         <div class="col form__back-img"></div>
+      </div>
+      <form action="#" class="d-flex flex-column">
+         <h3>Забронировать тур</h3>
+         <input type="date" placeholder="data"/>
+         <select name="people">
+            <option>
+               1 взрослый
+            </option>
+            <option>
+               2 взрослых
+            </option>
+            <option>
+               3 взрослых 
+            </option>
+         </select>
+         <select name="children">
+            <option>
+               Без детей 
+            </option>
+            <option>
+               1 ребёнок
+            </option>
+            <option>
+               2 ребёнка
+            </option>
+            <option>
+               3 ребёнка
+            </option>
+         </select>
+         <div class="d-flex justify-content-between">
+            <button class="btn-form">Забронировать</button>
+            <div class="d-flex align-self-center top-banner-review__title-heart">
+               <div class="back-heart"></div>
+               <svg width="30" height="26" viewBox="0 0 30 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M26.0497 3.76249C25.4112 3.12375 24.6532 2.61705 23.8189 2.27135C22.9845 1.92565 22.0903 1.74771 21.1872 1.74771C20.2841 1.74771 19.3898 1.92565 18.5555 2.27135C17.7211 2.61705 16.9631 3.12375 16.3247 3.76249L14.9997 5.08749L13.6747 3.76249C12.385 2.47288 10.636 1.74838 8.81216 1.74838C6.98837 1.74838 5.23928 2.47288 3.94966 3.76249C2.66005 5.05211 1.93555 6.8012 1.93555 8.62499C1.93555 10.4488 2.66005 12.1979 3.94966 13.4875L5.27466 14.8125L14.9997 24.5375L24.7247 14.8125L26.0497 13.4875C26.6884 12.849 27.1951 12.091 27.5408 11.2567C27.8865 10.4224 28.0644 9.5281 28.0644 8.62499C28.0644 7.72188 27.8865 6.82762 27.5408 5.9933C27.1951 5.15897 26.6884 4.40094 26.0497 3.76249V3.76249Z" stroke="#D4D4D4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+               </svg>
+            </div>
+         </div>
+      </form>
+   </section>
+   <footer>
+      <div class="d-flex container justify-content-between footer-box">
+         <a class="logo-footer" href="#">
+            <img src="img/logo_footer.svg" alt="лого">
+         </a>
+         <nav class="d-flex flex-column">
+            <a href="#">
+               Главная
+            </a>
+            <a href="#">
+               Экскурсии
+            </a>
+            <a href="#">
+               Личный кабинет
+            </a>
+         </nav>
+         <ul class="d-flex flex-column tel-box">
+            <li><img src="img/whats-svg.svg" alt="вацап"> +7 964 944 18 74</li>
+            
+            <li><img src="img/teleg-svg.svg" alt="телеграм">+7 918 919 98 28</li>
+            <li><img src="img/teleg-svg.svg" alt="телеграм"> Телеграм-бот PeroTravel</li>
+         </ul>
+         <ul class="d-flex flex-column email-box">
+            <li><img src="img/mail-svg.svg" alt="меил"> office@perotravel.ru</li>
+            <div class="social-icon">
+               <a href="#"><img src="img/vk-svg.svg" alt="vk"></a>
+               <a href="#"><img src="img/inst-svg.svg" alt="insta"></a>
+               <a href="#"><img src="img/face-svg.svg" alt="facebooc"></a>
+            </div>
+         </ul>
+      </div>
+   </footer>
+   <!-- Bootstrap JS -->
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.bundle.min.js"></script>
+   <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>-->
+   <!--carusel-->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+   <script src="js/owl.carousel.min.js"></script>
+   <script>const typeAnimate = 'fade';</script>
+   <script src="js/carusel-rew.js"></script>
+   <!-- calendar -->
+   
+   <script src='js/main.min.js'></script>
+   <script>
+      document.addEventListener('DOMContentLoaded', function() {
+         var calendarEl = document.getElementById('calendar');
+         var calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'dayGridMonth',
+            locale: 'Ru-ru',
+            
+         });
+         calendar.render();
+      });
+   </script>
+</body>
+</html>
