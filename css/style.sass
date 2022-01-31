@@ -1,0 +1,806 @@
+$color_span_yellow: #FFC700
+$color_span_blue: #0499DD
+*
+   padding: 0
+   margin: 0
+
+html
+
+body
+   font-family: 'Montserrat', sans-serif
+   position: relative
+   overflow-x: hidden
+
+a
+   text-decoration: none
+   color: #fff
+
+header
+   position: absolute
+   top: 0
+   width: 100%
+
+.navbar-light .navbar-toggler
+   color: #fff
+   border: 0
+
+   &:hover
+      fill: $color_span_yellow
+
+.navbar-collapse
+   flex-basis: auto !important
+   flex-grow: 0 !important
+nav
+   padding: 27px 0 !important
+   background: 0 0
+
+   a:hover
+      color: $color_span_yellow
+
+      .svg-hover
+         fill: $color_span_yellow
+
+.top-banner-review
+   background: url(../img/top-banner-review.png) no-repeat center/cover
+
+   &__title
+      color: #fff
+      padding: 211px 0
+
+      span
+         color: $color_span_yellow
+         padding-bottom: 10px
+         font-weight: bold
+         font-size: 24px
+         line-height: 29px
+
+      h1
+         font-weight: bold
+         font-size: 48px
+         line-height: 59px
+         padding-bottom: 70px
+
+      a
+         padding: 16px 39px
+         background: linear-gradient(92.71deg, $color_span_blue 0%, #17C1BC 100%)
+         border-radius: 60px
+
+         svg
+            margin-left: 5px
+
+         &:hover
+            color: $color_span_yellow
+
+            path
+               fill: $color_span_yellow
+
+      &-heart
+         position: relative
+         overflow: hidden
+         border-radius: 50px
+         margin-left: 15px
+         cursor: pointer
+
+         div
+            position: absolute
+            background: #FFFFFF
+            opacity: 0.3
+            backdrop-filter: blur(1000px)
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+
+         svg
+            height: 50px
+            width: 50px
+            padding: 13px
+
+         &:hover path
+            stroke: $color_span_yellow
+
+.desc-tour
+   padding: 150px 0
+
+   &__title
+      padding-right: 130px
+
+      h3
+         font-weight: bold
+         font-size: 24px
+         line-height: 29px
+         color: $color_span_blue
+         padding-bottom: 40px
+
+      p
+         font-weight: 500
+         font-size: 14px
+         line-height: 17px
+         width: 100%
+
+   &__item-box
+      grid-gap: 40px
+      flex-wrap: wrap
+
+   &__item
+      position: relative
+
+      &-back
+         position: absolute
+         width: 100%
+         height: 100%
+         z-index: -5
+         top: 0
+         background: rgba(255, 255, 255, 0.2)
+         box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1)
+         backdrop-filter: blur(20px)
+         border-radius: 10px
+
+      &-ring
+         position: absolute
+         width: 57px
+         height: 57px
+         top: -17px
+         left: -18px
+         background: $color_span_yellow
+         border-radius: 50%
+         z-index: -6
+
+      &-title
+         padding: 20px
+
+         p
+            margin-bottom: 0 !important
+            font-weight: 500
+            font-size: 14px
+            line-height: 17px
+
+         span
+            color: $color_span_blue
+            padding-left: 10px
+
+      .title-pading
+         padding: 34px 13px
+
+.calendar
+   position: relative
+
+   &__back-img
+      position: absolute
+      left: 0
+      top: 0
+      background: url(../img/back-calendar.png) no-repeat center/cover
+      border-radius: 0px 10px 10px 0px
+      width: 60%
+      height: 877px
+
+   &__title
+      padding: 142px 0 163px
+      z-index: 5
+      display: flex
+      align-items: flex-end
+      flex-direction: column
+
+      h3
+         padding: 3px 13px 4px
+         background: #fff
+         color: $color_span_blue
+         font-weight: bold
+         font-size: 24px
+         line-height: 29px
+         margin-bottom: 90px
+
+      .cal-box
+         width: 100%
+         height: 100%
+
+      .fc .fc-view-harness
+         height: 212px !important
+         width: 450px
+
+      .fc .fc-daygrid-day.fc-day-today
+         background: 0 0
+         border: 1px solid $color_span_blue
+
+      .fc .fc-scrollgrid-section-body table, .fc .fc-scrollgrid-section-footer table
+         width: 100% !important
+
+      .fc-view
+         width: 100%
+
+      .fc-theme-standard .fc-scrollgrid, .fc-theme-standard td, .fc-theme-standard th
+         border: 0
+         color: $color_span_blue
+
+      .fc .fc-col-header-cell-cushion
+         color: #000
+         opacity: 0.7
+
+         &:hover
+            opacity: 1
+
+      .fc .fc-daygrid-body-unbalanced .fc-daygrid-day-events
+         display: none
+
+      .fc .fc-daygrid-day-number
+         color: #000
+         opacity: 0.7
+
+      .fc .fc-daygrid-day-top
+         justify-content: center
+
+      .fc-scroller
+         overflow: clip !important
+
+      .fc-direction-ltr
+         padding: 50px 30px 60px
+         background: #EDEDED
+         border-radius: 10px
+
+      .fc .fc-toolbar-title
+         font-weight: bold
+         font-size: 24px
+         line-height: 29px
+         text-align: center
+         color: $color_span_blue
+
+      .fc-today-button
+         display: none
+
+      .fc .fc-toolbar
+         position: relative
+         justify-content: center
+
+         .fc-button-group
+            position: absolute
+            width: 100%
+            margin: 0
+            top: 2px
+            left: 0
+            display: flex
+            justify-content: space-between
+
+            button
+               background: 0 0
+               border: 0
+               color: $color_span_blue
+               flex: 0
+               padding: 0
+
+.rout-deck
+   padding: 150px 0
+   position: relative
+
+   &__box
+
+   &__title
+      padding-right: 117px
+
+      h3
+         font-weight: bold
+         font-size: 24px
+         line-height: 29px
+         color: $color_span_blue
+         padding-bottom: 90px
+
+      li
+         font-size: 14px
+         font-weight: 500
+         line-height: 17px
+         padding-bottom: 21px
+
+         &::marker
+            color: $color_span_yellow
+
+      p
+         font-weight: bold
+         font-size: 14px
+         line-height: 17px
+         padding: 19px 0 0
+         margin-bottom: 40px
+
+   &__shell
+      position: relative
+      width: 780px
+
+   &__carousel
+      position: absolute
+
+      .owl-carousel .owl-item
+         width: 443px !important
+
+         .item
+            position: relative
+
+            h4
+               position: absolute
+               font-size: 14px
+               line-height: 17px
+               color: $color_span_yellow
+               left: 25px
+               bottom: 20px
+               margin: 0
+
+         img
+            width: auto
+            height: 570px
+
+.expenses
+   padding-bottom: 150px
+
+   &__title
+      h3
+         padding-bottom: 107px
+         font-weight: bold
+         font-size: 24px
+         line-height: 29px
+         color: $color_span_blue
+
+   &__table
+      grid-gap: 32px
+      flex-wrap: wrap
+
+.import-info
+   padding-bottom: 103px
+   &__box
+      h3
+         padding-bottom: 90px
+         font-weight: bold
+         font-size: 24px
+         line-height: 29px
+         color: $color_span_blue
+
+   &__cont-left
+      padding-right: 212px
+      h4
+         font-weight: bold
+         font-size: 18px
+         line-height: 22px
+         padding-bottom: 40px
+
+      &-item
+         padding-bottom: 44px
+
+         h5
+            font-weight: bold
+            font-size: 18px
+            line-height: 22px
+            color: $color_span_blue
+            padding: 0 0 20px 28px
+
+         p
+            padding-left: 28px
+            font-size: 14px
+            line-height: 17px
+
+   &__cont-right
+      &-item
+         position: relative
+         background: #EDEDED
+         border-radius: 10px
+         padding: 40px 58px 40px 25px
+         margin-bottom: 51px
+
+         h5
+            position: absolute
+            top: 0
+            right: 27px
+            color: $color_span_yellow
+            font-size: 96px
+            line-height: 129px
+            opacity: 0.4
+
+         p
+            margin: 0
+            font-size: 14px
+            line-height: 17px
+
+            span
+               font-weight: bold
+
+.gallery-tour
+   margin-bottom: 150px
+
+   &__content
+      display: grid
+      grid-gap: 20px
+      grid-template-columns: repeat(5, 1fr)
+      grid-template-rows: repeat(4, 1fr)
+      justify-content: center
+
+      img
+         height: 100%
+
+      img:nth-child(1)
+         grid-column: span 2
+         grid-row: span 2
+         width: 100%
+
+      img:nth-child(2)
+         grid-row: span 4
+
+      img:nth-child(3)
+         grid-row: span 2
+
+      img:nth-child(4)
+         grid-row: span 2
+
+      img:nth-child(5)
+         grid-column: 1 / 2
+         grid-row: 3 / 5
+         grid-row: span 2
+
+      img:nth-child(7)
+         grid-column: 2 / 3
+         grid-row: 4 / 5
+
+      img:nth-child(8)
+         grid-row: span 2
+         grid-column: span 2
+         width: 100%
+
+   &__title
+      h3
+         padding-bottom: 90px
+         font-weight: bold
+         font-size: 24px
+         line-height: 29px
+         color: $color_span_blue
+
+      p
+         font-size: 12px
+         line-height: 15px
+         text-decoration-line: underline
+         cursor: pointer
+         padding: 7px
+         margin-bottom: 0
+         height: 100%
+
+.reviews
+   padding-bottom: 150px
+   .container
+      position: relative
+
+   &__title
+      h3
+         padding-bottom: 90px
+         font-weight: bold
+         font-size: 24px
+         line-height: 29px
+         color: $color_span_blue
+
+      p
+         font-size: 12px
+         line-height: 15px
+         text-decoration-line: underline
+         cursor: pointer
+         padding: 7px
+         margin-bottom: 0
+         height: 100%
+
+   &__shell
+      position: relative
+      height: 405px
+      overflow: visible
+
+   &__carousel
+      position: absolute
+      height: 100%
+      left: 0
+      z-index: 100
+      overflow: visible
+
+      figure
+         background: #EDEDED
+         border-radius: 10px
+         margin-right: 20px
+         display: block
+         position: relative
+         max-height: 322px
+         max-width: 740px
+
+         img
+            padding: 38px 28px 52px 45px
+            border-radius: 10px
+
+         div
+            padding: 38px 17px 28px 0
+
+            h4
+               font-weight: bold
+               font-size: 14px
+               line-height: 17px
+               color: #282828
+               padding-bottom: 20px
+
+            p
+               font-weight: 500
+               font-size: 14px
+               line-height: 17px
+               color: #282828
+
+         span
+            font-family: 'Marko One', serif
+            position: absolute
+            top: 80px
+            right: 80px
+            font-weight: normal
+            font-size: 400px
+            line-height: 536px
+            opacity: 0.4
+            transform: rotate(16.66deg)
+            color: $color_span_yellow
+
+.owl-nav
+   position: absolute
+   left: 0
+
+   button
+      margin-right: 38px !important
+
+      &:hover
+         background: 0 0 !important
+
+   path
+      stroke: $color_span_blue
+      opacity: 0.6
+
+.owl-theme .owl-dots
+   width: 100vh
+   text-align: start
+   margin: 20px 0 0 150px
+
+   .owl-dot span
+      width: 170px
+      background: #D4D4D4
+      opacity: 0.6
+      height: 5px
+      border-radius: 0
+      margin: 0
+
+.owl-theme .owl-dots .owl-dot.active span
+   opacity: 1
+   background: $color_span_blue
+
+.form
+
+   .form-shell
+      width: 60%
+      position: relative
+      overflow-y: clip
+
+   &__back-img
+      width: 1600px
+      position: absolute
+      right: 0
+      top: 0
+      background: url(../img/back-form.png) no-repeat center center/cover
+      border-radius: 0px 10px 10px 0px
+      height: 640px
+
+   form
+      z-index: 10
+      padding: 117px 0 117px 117px
+
+      h3
+         font-weight: bold
+         font-size: 24px
+         line-height: 29px
+         color: $color_span_blue
+         padding-bottom: 90px
+
+      select, input
+         width: 360px
+         padding: 16px 25px
+         font-size: 14px
+         line-height: 17px
+         color: #282828
+         background: #FFFFFF !important
+         box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1)
+         border-radius: 10px
+         margin-bottom: 20px
+         border: 0
+         cursor: pointer
+
+      input[type=date]::-webkit-calendar-picker-indicator
+         appearance: none
+         overflow: hidden !important
+         background: url('../img/input-calend.svg') no-repeat right
+
+      select
+         appearance: none
+         overflow: hidden !important
+         background: url('../img/input-people.svg') no-repeat right !important
+         background-position-x: 315px !important
+
+      .btn-form
+         background: linear-gradient(92.71deg, $color_span_blue 0%, #17C1BC 100%)
+         border-radius: 60px
+         padding: 16px 73px
+         border: 0
+         font-weight: bold
+         font-size: 14px
+         line-height: 17px
+         color: #fff
+
+         &:hover
+            color: $color_span_yellow
+
+      .back-heart
+         background: #EDEDED
+
+footer
+   background: #EDEDED
+
+   .footer-box
+      padding: 30px 0
+
+      nav
+         padding: 0 !important
+         justify-content: center
+         a
+            color: #000
+
+      ul
+         padding: 0
+         margin: 0
+         justify-content: center
+
+         li
+            list-style-type: none
+
+            img
+               padding-right: 9px
+
+         a
+
+            img
+               padding: 12px 12px 0 0
+
+      .tel-box
+
+@media(max-width: 1024px)
+
+   .lap-div
+      right: -5px
+      top: 100px
+      flex-direction: column
+      position: absolute
+      background: rgba(211, 211, 211, 0.26)
+      padding: 47px 30px
+      border-radius: 20px
+      transition: 1s
+      height: 250px
+      a
+         padding: 7px
+
+   .collapse:not(.show)
+      display: flex
+      flex-direction: column
+      right: -300px
+
+   .rout-deck__box
+      flex-direction: column
+
+   .rout-deck__shell
+      height: 620px
+      width: 440px
+
+   .import-info
+      display: none
+
+   .gallery-tour__content
+      grid-template-columns: repeat(3, 1fr)
+      grid-template-rows: repeat(2, 1fr)
+
+      img
+         width: 100%
+
+      img:nth-child(1), img:nth-child(5), img:nth-child(6), img:nth-child(7)
+         display: none
+
+   .reviews__shell
+      width: 1300px
+
+@media(max-width: 667px)
+
+   .desc-tour__item-box
+      padding-top: 60px
+
+   .desc-tour
+      padding: 150px 15px
+
+   .calendar__title .fc .fc-view-harness
+      width: 340px !important
+
+   .rout-deck__title h3
+      padding-left: 15px
+
+   .rout-deck__shell
+      padding-left: 6px
+
+   .reviews__carousel figure
+      flex-direction: column
+      max-width: 280px
+      max-height: 490px
+
+   .reviews
+
+      .owl-carousel .owl-stage-outer
+         height: 490px
+         width: 100%
+
+      .owl-carousel .owl-item img
+         width: 80px
+         padding: 0
+         margin: 32px 0 20px 28px
+
+      .reviews__carousel figure div
+         padding: 0 24px 48px 28px
+
+         h4
+            padding-bottom: 0
+
+      .owl-carousel.owl-drag .owl-item
+         margin-right: -607px !important
+         width: 965px !important
+
+   .form
+      flex-direction: column
+
+      .form-shell
+         width: 100%
+         border-radius: 0
+         padding: 0
+         height: 350px
+
+      .form__back-img
+         border-radius: 0
+         right: -20px
+         width: 667px
+
+      form
+         width: 100%
+         padding: 40px 0 150px
+
+         select, input
+            width: 100%
+
+         select
+            background-position-x: 350px !important
+
+         .btn-form
+            padding: 16px 96px
+
+   footer .footer-box
+      flex-direction: column
+      position: relative
+
+      .tel-box
+         position: absolute
+         right: 0
+         top: 270px
+
+      .email-box
+         position: absolute
+         right: 0
+         top: 345px
+
+         .social-icon
+            position: absolute
+            right: -24px
+            top: -210px
+            width: 300px
+
+      .logo-footer
+         display: flex
+         justify-content: center
+         margin-bottom: 150px
+
+      nav, ul
+         width: 60%
+         padding-left: 7px !important
+         padding-bottom: 88px !important
+
+   .gallery-tour__content
+      grid-gap: 10px
